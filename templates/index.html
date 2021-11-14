@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer</title>
+</head>
+<body>
+    <h1>Welcome Here!</h1>
+    <h2>Enter your text below..</h2>
+    <form action="/analyze" action='GET'>
+    {% csrf_token %}
+    <textarea name="text" id="text" cols="10" rows="10" style="margin: 0px; height: 200px; width: 1325px;"></textarea>
+    <br>
+   <b> 
+  <input type="radio" id="removepunc" name="strop" value="removepunc">
+  <label for="removepunc">Remove Punctuations</label><br><br>
+
+<input type="radio" id="uppercase" name="strop" value="uppercase">
+  <label for="uppercase">UPPERCASE</label><br><br>
+
+<input type="radio" id="lowercase" name="strop" value="lowercase">
+  <label for="lowercase">lowercase</label><br><br>
+
+  <input type="radio" id="newlineremover" name="strop" value="newlineremover">
+  <label for="newlineremover">New Line-Remover</label><br><br>
+  <input type="radio" id="extraspaceremover" name="strop" value="extraspaceremover">
+  <label for="extraspaceremover">ExtraSpace-Remover</label><br><br>
+  <input type="radio" id="charcount" name="strop" value="charcount">
+  <label for="charcount">Character Count</label><br><br>   
+  <button type='submit' style=" height: 50px; width: 150px; ">Lets Go!</button>
+    </b>
+    </form>
+</body>
+</html>
